@@ -1,0 +1,23 @@
+# include <iostream>
+# include <string>
+using namespace std;
+
+class Sample 
+{
+    public:
+    int print (string s)
+    {
+        return s.length();
+    }
+};
+
+int main ()
+{
+    Sample obj;
+    string s;
+    cout<<"enter a string\n";
+    //cin>>s;
+    getline (cin,s);
+    int len = obj.print (s);
+    cout<<len<<endl;
+}
