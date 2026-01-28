@@ -1,0 +1,25 @@
+# include <iostream>
+using namespace std;
+
+class Sample 
+{
+    public:
+    int fact (int  n)
+    {
+        int f = 1;
+        while (n>0)
+        {
+            f = f*n;
+            n--;
+        }
+        return f;
+    }
+};
+
+int main ()
+{
+    Sample s;
+    int ans=s.fact(3);
+    cout<<ans;
+    
+}
