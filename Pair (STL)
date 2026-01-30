@@ -1,0 +1,42 @@
+# include<iostream>
+# include <utility>
+using namespace std;
+
+int main ()
+{
+    // 1. container: PAIR: used  to store 2 values
+    //syntax: pair <data_type1,data_type2> pair_name
+    
+    pair <int,int>p = {1,2};
+    
+    pair <double,double>dp = {3.14,2.3};
+    
+    // how to access: using pair_name. first/second
+   cout<< p.first;//1
+    cout<<p.second;// 2 
+    cout<<dp.first;//3.14
+    cout<<dp.second;//2.3
+    cout<<endl;
+    
+    
+    // to store more than two elements we use nested pair :
+    pair <int,pair <int,int>>np = {1,{3,4}};
+    //P1 = {1, {}}
+    //P2= {3,4}
+    //acessing:
+    cout<<np.first;//1
+    cout<<np.second.first;//3 
+    cout<<np.second.second ;// 4
+    cout<<endl;
+    
+    // array of pairs:
+    
+    pair <int,int>arr[] = {{1,2},{2,3},{3,4}};
+    // {1,2} stored in index 0 
+    //{2,3} stored in index 1 
+    //{3,4} stored in  index P2
+    // access : array_name [index].first/second
+    
+    cout<<arr[0].first;//1
+    cout<<arr[1].second;//2 
+}
