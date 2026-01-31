@@ -1,0 +1,57 @@
+# include <iostream>
+# include <vector>
+using namespace std;
+int main  ()
+{
+    // vectors : dynamic arrays
+    vector <int>v;
+    // insert : using push_back or emplace_back
+    v.push_back (10);
+    v.emplace_back(20);
+    for (int i =0;i<2;i++)
+    {
+        cout<<v[i];
+    }
+    cout<<endl;
+    
+    // vector of pairs:
+    
+    vector <pair<int,int>> vp;
+    vp.push_back ({1,2});
+    vp.emplace_back (3,4);
+    
+
+
+        cout<<vp[0].first;
+        cout<<vp[0].second;
+        cout<<vp[1].first;
+        cout<<vp[1].first;
+    cout<<endl;
+    
+    // vector with already filed values
+    
+    vector <int>fv (2,100);
+    
+    for (int i =0;i<2;i++)
+    {
+        cout<<fv[i];
+    }
+    cout<<endl;
+    
+    // copy a existing vector to another vector
+    
+    
+    vector <int> v1(2,10);
+    vector <int>v2(v1);
+    
+    for (int i =0;i<2;i++)
+    {
+        cout<<v2[i];
+    }
+    cout<<endl;
+    // accessing element using array notation or .notation
+    
+    cout<<v2[0];
+    cout<<v2.at(0);
+    
+}
