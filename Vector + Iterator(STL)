@@ -1,0 +1,82 @@
+#include <iostream>
+#include <vector>
+#include <iterator>
+using namespace std;
+
+int main()
+{
+    vector<int> v = {10, 20, 30, 40, 50};
+
+    // Implementing iterators
+    vector<int>::iterator it = v.begin();
+
+    cout << *it << endl;  // 10
+    it++;
+    cout << *it << endl;  // 20
+
+    // Printing all elements using iterator
+    for (vector<int>::iterator i = v.begin(); i != v.end(); i++)
+    {
+        cout << *i << " ";
+    }
+    cout << endl;
+
+    // Simpler version using auto
+    for (auto i = v.begin(); i != v.end(); i++)
+    {
+        cout << *i << " ";
+    }
+    cout << endl;
+
+    // Using for-each loop
+    for (auto i : v)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
+
+    // Erase function
+    vector<int> v2 = {1, 2, 3, 4, 5};
+    v2.erase(v2.begin() + 1);   // {1,3,4,5}
+
+    v2.erase(v2.begin() + 1, v2.begin() + 3); // {1,5}
+
+    // Insert function
+    vector<int> v3;
+    v3.insert(v3.begin(), 100);         // {100}
+    v3.insert(v3.begin() + 1, 2, 22);   // {100,22,22}
+    
+    // copy 
+    
+    vector <int> v4 = {1,2};
+    vector <int> v5 = {3,4};
+    
+    v5.insert (v5.begin (), v4.begin (),v4.end());
+    
+    for (auto i:v5)
+    {
+        cout<<i<<" ";
+    }
+    
+    // size 
+    cout<<v5.size()<<endl;
+    
+    //pop_back : deletes last element:
+    
+    v5.pop_back ();
+    
+    for (auto i: v5)
+    {
+        cout<<i<<" ";
+    }
+    
+    // clear : to erase all elements
+    
+    v4.clear ();
+    
+    // empty: checks if a vector is empty
+    
+    cout<<v4.empty();
+
+    return 0;
+}
